@@ -1,31 +1,3 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class TrafficBehavior : MonoBehaviour {
-
-    private Rigidbody2D rb;
-
-    // Use this for initialization
-    void Start () {
-        rb = GetComponent<Rigidbody2D>();
-
-    }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
-    void FixedUpdate()
-    {
-        Debug.Log("here");
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.up);
-        Debug.Log(hit.distance);
-        if (hit.collider.tag == "Car" && hit.distance < 5 && Vector2.Dot(rb.velocity, transform.up) > 0)
-        {
-            rb.AddForce(-1 * transform.up * (5-hit.distance));
-            if (Vector2.Dot(rb.velocity, transform.up) < 0) rb.velocity = Vector2.zero;
-        }
-    }
-}
+﻿using System.Collections;using System.Collections.Generic;using UnityEngine;public class TrafficBehavior : MonoBehaviour {    private Rigidbody2D rb;    public float maxDist;    public float decel;    // Use this for initialization    void Start () {        rb = GetComponent<Rigidbody2D>();    }		// Update is called once per frame	void Update () {			}    void FixedUpdate()    {        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.up);        float distance = Vector2.Distance(transform.position, hit.point);        Debug.Log(distance);        if (hit.collider.tag == "Car" && distance < maxDist && Vector2.Dot(rb.velocity, transform.up) > 0)        {
+            rb.AddForce(rb.velocity.magnitude * -decel * transform.up * (1/distance));
+            // rb.velocity *= 1 - decel * (1/hit.distance);            if (Vector2.Dot(rb.velocity, transform.up) < 0 || distance<1) rb.velocity = Vector2.zero;        }    }}
