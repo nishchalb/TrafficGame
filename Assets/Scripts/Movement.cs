@@ -30,6 +30,7 @@ public class Movement : MonoBehaviour {
         targetDir = nextWaypoint.transform.position - transform.position;
         angDiff = Vector2.Angle(transform.up, targetDir);
 
+        // Check if we need to turn
         //if (Mathf.Abs(angDiff) > .1)
         if (Vector2.Dot(transform.up, targetDir) < .99)
         {
@@ -66,7 +67,10 @@ public class Movement : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("collision");
-        nextWaypoint  = collision.gameObject.GetComponent<WaypointBehavior>().GetNextWaypoint();
+        if (collision.tag == "Waypoint")
+        {
+            Debug.Log("collision");
+            nextWaypoint = collision.gameObject.GetComponent<WaypointBehavior>().GetNextWaypoint();
+        }
     }
 }
