@@ -30,9 +30,11 @@ public class Movement : MonoBehaviour {
         targetDir = nextWaypoint.transform.position - transform.position;
         angDiff = Vector2.Angle(transform.up, targetDir);
 
+        float cosine = Vector2.Dot(transform.up, targetDir.normalized);
+
         // Check if we need to turn
         //if (Mathf.Abs(angDiff) > .1)
-        if (Vector2.Dot(transform.up, targetDir) < .99)
+        if (cosine < .99)
         {
             
             rb.velocity = Vector2.zero;
