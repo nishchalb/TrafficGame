@@ -138,7 +138,7 @@ Transform:
   - {fileID: 716422445}
   - {fileID: 412276297}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &299042236
 Prefab:
@@ -214,6 +214,20 @@ Prefab:
       propertyPath: vlabel
       value: 
       objectReference: {fileID: 1970586443}
+    - target: {fileID: 1569323620340248, guid: 9624919fcbf014b09a100a6c0c706747, type: 2}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 212378140699063124, guid: 9624919fcbf014b09a100a6c0c706747,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1205850779
+      objectReference: {fileID: 0}
+    - target: {fileID: 212378140699063124, guid: 9624919fcbf014b09a100a6c0c706747,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9624919fcbf014b09a100a6c0c706747, type: 2}
   m_IsPrefabParent: 0
@@ -369,6 +383,16 @@ Prefab:
       propertyPath: m_Name
       value: traffic light (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 212378140699063124, guid: 9624919fcbf014b09a100a6c0c706747,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1205850779
+      objectReference: {fileID: 0}
+    - target: {fileID: 212378140699063124, guid: 9624919fcbf014b09a100a6c0c706747,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9624919fcbf014b09a100a6c0c706747, type: 2}
   m_IsPrefabParent: 0
@@ -496,7 +520,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 2062706633
+  m_SortingLayerID: 1029224621
   m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 0d4925ec0f21f4478a3c4382999daa9d, type: 3}
@@ -518,7 +542,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &488873618
 GameObject:
@@ -941,6 +965,16 @@ Prefab:
     - target: {fileID: 1569323620340248, guid: 9624919fcbf014b09a100a6c0c706747, type: 2}
       propertyPath: m_Name
       value: traffic light (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 212378140699063124, guid: 9624919fcbf014b09a100a6c0c706747,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1205850779
+      objectReference: {fileID: 0}
+    - target: {fileID: 212378140699063124, guid: 9624919fcbf014b09a100a6c0c706747,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9624919fcbf014b09a100a6c0c706747, type: 2}
@@ -2483,7 +2517,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2062706633
-  m_SortingLayer: 1
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: c86d9b713763e43e28deb2442b8a7e17, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2583,6 +2617,16 @@ Prefab:
     - target: {fileID: 1569323620340248, guid: 9624919fcbf014b09a100a6c0c706747, type: 2}
       propertyPath: m_Name
       value: traffic light (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 212378140699063124, guid: 9624919fcbf014b09a100a6c0c706747,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1205850779
+      objectReference: {fileID: 0}
+    - target: {fileID: 212378140699063124, guid: 9624919fcbf014b09a100a6c0c706747,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9624919fcbf014b09a100a6c0c706747, type: 2}
