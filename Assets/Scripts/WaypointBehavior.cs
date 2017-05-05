@@ -35,4 +35,9 @@ public class WaypointBehavior : MonoBehaviour {
         }
         return nextWaypoints[0].wp;
     }
+
+    public Vector2 GetWaypointOffset()
+    {
+        return GetComponent<BoxCollider2D>().offset;
+    }
 }

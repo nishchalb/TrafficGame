@@ -27,8 +27,9 @@ public class Movement : MonoBehaviour {
 
     private void FixedUpdate()
     {
-        targetDir = nextWaypoint.transform.position - transform.position;
-        angDiff = Vector2.Angle(transform.up, targetDir);
+        Vector2 offset = nextWaypoint.GetComponent<WaypointBehavior>().GetWaypointOffset();
+        targetDir = nextWaypoint.transform.position + new Vector3(offset.x, offset.y, 0) - transform.position;
+        angDiff = Vector2.Angle(transform.up, targetDir.normalized);
 
         float cosine = Vector2.Dot(transform.up, targetDir.normalized);
 
@@ -42,7 +43,7 @@ public class Movement : MonoBehaviour {
             if (cross.z < 0) angDiff *= -1;
             Debug.Log(angDiff);
             rb.rotation += turnRate * angDiff;
-            transform.up = Vector2.Lerp(transform.up, targetDir, .1f);
+            ///transform.up = Vector2.Lerp(transform.up, targetDir, .1f);
             // rb.AddForce(-1 * rb.velocity); disabled for now in favor of immediate stopping
         } else
         {
