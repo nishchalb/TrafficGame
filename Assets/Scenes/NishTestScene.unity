@@ -152,6 +152,31 @@ Prefab:
       propertyPath: nextWaypoint
       value: 
       objectReference: {fileID: 1211579143}
+    - target: {fileID: 61767583209215478, guid: 02ae4e88f0e74cc4a9d921151a1a327d,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 61767583209215478, guid: 02ae4e88f0e74cc4a9d921151a1a327d,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 61767583209215478, guid: 02ae4e88f0e74cc4a9d921151a1a327d,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 61767583209215478, guid: 02ae4e88f0e74cc4a9d921151a1a327d,
+        type: 2}
+      propertyPath: m_EdgeRadius
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 61767583209215478, guid: 02ae4e88f0e74cc4a9d921151a1a327d,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114604502153868608, guid: 02ae4e88f0e74cc4a9d921151a1a327d, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 02ae4e88f0e74cc4a9d921151a1a327d, type: 2}
@@ -203,6 +228,11 @@ Prefab:
     - target: {fileID: 1910300222251608, guid: 61bb27327274f4c47995a48de96354a3, type: 2}
       propertyPath: m_Name
       value: NavWaypoint (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 61193954692283212, guid: 61bb27327274f4c47995a48de96354a3,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 61bb27327274f4c47995a48de96354a3, type: 2}
@@ -270,6 +300,16 @@ Prefab:
         type: 2}
       propertyPath: nextWaypoints.Array.data[0].rangeMax
       value: 1.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 61193954692283212, guid: 61bb27327274f4c47995a48de96354a3,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 61193954692283212, guid: 61bb27327274f4c47995a48de96354a3,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 61bb27327274f4c47995a48de96354a3, type: 2}
@@ -506,6 +546,11 @@ Prefab:
       propertyPath: m_Name
       value: NavWaypoint (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 61193954692283212, guid: 61bb27327274f4c47995a48de96354a3,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 61bb27327274f4c47995a48de96354a3, type: 2}
   m_IsPrefabParent: 0
@@ -556,6 +601,11 @@ Prefab:
     - target: {fileID: 1910300222251608, guid: 61bb27327274f4c47995a48de96354a3, type: 2}
       propertyPath: m_Name
       value: NavWaypoint (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 61193954692283212, guid: 61bb27327274f4c47995a48de96354a3,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 61bb27327274f4c47995a48de96354a3, type: 2}

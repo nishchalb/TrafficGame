@@ -31,7 +31,7 @@ public class WaypointBehavior : MonoBehaviour {
         float val = Random.value;
         foreach (NextWaypoint waypoint in nextWaypoints)
         {
-            if (waypoint.rangeMin >= val && waypoint.rangeMax >= val) return waypoint.wp;
+            if (waypoint.rangeMin <= val && waypoint.rangeMax >= val) return waypoint.wp;
         }
         return nextWaypoints[0].wp;
     }
