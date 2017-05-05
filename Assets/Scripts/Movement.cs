@@ -74,7 +74,7 @@ public class Movement : MonoBehaviour {
     IEnumerator Turn(Vector3 start, Vector3 end, Transform tform)
     {
         isTurning = true;
-        for (float f = 0f; f <= 1; f += 0.1f)
+        for (float f = 0f; f <= 1; f += 0.2f)
         {
             transform.up = Vector2.Lerp(start, end, f);
             yield return null;
