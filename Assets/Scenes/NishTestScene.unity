@@ -298,6 +298,11 @@ Prefab:
       propertyPath: m_AngularDrag
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114584825305323636, guid: 02ae4e88f0e74cc4a9d921151a1a327d,
+        type: 2}
+      propertyPath: maxDist
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114604502153868608, guid: 02ae4e88f0e74cc4a9d921151a1a327d, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 02ae4e88f0e74cc4a9d921151a1a327d, type: 2}
@@ -477,11 +482,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4907910880081362, guid: 02ae4e88f0e74cc4a9d921151a1a327d, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -9.89
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 4907910880081362, guid: 02ae4e88f0e74cc4a9d921151a1a327d, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -4.26
+      value: -1.44
       objectReference: {fileID: 0}
     - target: {fileID: 4907910880081362, guid: 02ae4e88f0e74cc4a9d921151a1a327d, type: 2}
       propertyPath: m_LocalPosition.z
@@ -518,7 +523,7 @@ Prefab:
       objectReference: {fileID: 1211579143}
     - target: {fileID: 1627624838135588, guid: 02ae4e88f0e74cc4a9d921151a1a327d, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 02ae4e88f0e74cc4a9d921151a1a327d, type: 2}

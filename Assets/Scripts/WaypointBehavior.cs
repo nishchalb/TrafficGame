@@ -36,6 +36,11 @@ public class WaypointBehavior : MonoBehaviour {
         return nextWaypoints[0].wp;
     }
 
+    public bool isTerminal()
+    {
+        return nextWaypoints.Length == 0;
+    }
+
     public Vector2 GetWaypointOffset()
     {
         return GetComponent<BoxCollider2D>().offset;
