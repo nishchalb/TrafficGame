@@ -31,6 +31,9 @@ public class Movement : MonoBehaviour {
 
     private void FixedUpdate()
     {
+		if (stopped) {
+			return;
+		}
         Vector2 offset = nextWaypoint.GetComponent<WaypointBehavior>().GetWaypointOffset();
         targetDir = nextWaypoint.transform.position + new Vector3(offset.x, offset.y, 0) - transform.position;
         Debug.DrawRay(transform.position, targetDir);
@@ -78,15 +81,16 @@ public class Movement : MonoBehaviour {
 			}
 
 			// Dont run into other cars
-			RaycastHit2D hit = Physics2D.Raycast (transform.position, transform.up);			float distance = Vector2.Distance (transform.position, hit.point);			if (hit.collider.tag == "Car" && distance < maxDist && Vector2.Dot (rb.velocity, transform.up) > 0) {
+		RaycastHit2D hit = Physics2D.Raycast (transform.position, transform.up);		float distance = Vector2.Distance (transform.position, hit.point);
+		if (hit.collider) {			if (hit.collider.tag == "Car" && distance < maxDist && Vector2.Dot (rb.velocity, transform.up) > 0) {
 				rb.AddForce (rb.velocity.magnitude * -decel * transform.up * (1 / distance));
 				// rb.velocity *= 1 - decel * (1/hit.distance);
 				if (Vector2.Dot (rb.velocity, transform.up) < 0 || distance < 1.5) {
 					rb.velocity = Vector2.zero;
 				}			}
-
-			Debug.DrawRay (transform.position, targetDir);
 		}
+		Debug.DrawRay (transform.position, targetDir);
+	}
 
 
     IEnumerator Turn(Vector3 start, Vector3 end, Transform tform)
@@ -97,7 +101,7 @@ public class Movement : MonoBehaviour {
             transform.up = Vector2.Lerp(start, end, f);
             yield return null;
         }
-        Debug.Log(Vector2.Dot(transform.up, end));
+        //Debug.Log(Vector2.Dot(transform.up, end));
         isTurning = false;
     }
 
