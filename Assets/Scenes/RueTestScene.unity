@@ -140,6 +140,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &113753615 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1569323620340248, guid: 9624919fcbf014b09a100a6c0c706747,
+    type: 2}
+  m_PrefabInternal: {fileID: 1941582518}
+--- !u!65 &113753618
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 113753615}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.7, y: 1.8, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &299042236
 Prefab:
   m_ObjectHideFlags: 0
@@ -227,6 +244,10 @@ Prefab:
         type: 2}
       propertyPath: m_SortingLayer
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1569323620340248, guid: 9624919fcbf014b09a100a6c0c706747, type: 2}
+      propertyPath: m_Name
+      value: trafficlight1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9624919fcbf014b09a100a6c0c706747, type: 2}
@@ -381,7 +402,7 @@ Prefab:
       objectReference: {fileID: 1970586443}
     - target: {fileID: 1569323620340248, guid: 9624919fcbf014b09a100a6c0c706747, type: 2}
       propertyPath: m_Name
-      value: traffic light (3)
+      value: trafficlight4
       objectReference: {fileID: 0}
     - target: {fileID: 212378140699063124, guid: 9624919fcbf014b09a100a6c0c706747,
         type: 2}
@@ -964,7 +985,7 @@ Prefab:
       objectReference: {fileID: 1970586443}
     - target: {fileID: 1569323620340248, guid: 9624919fcbf014b09a100a6c0c706747, type: 2}
       propertyPath: m_Name
-      value: traffic light (2)
+      value: trafficlight3
       objectReference: {fileID: 0}
     - target: {fileID: 212378140699063124, guid: 9624919fcbf014b09a100a6c0c706747,
         type: 2}
@@ -2018,6 +2039,40 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   light: {fileID: 0}
+--- !u!1 &1295352727 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1569323620340248, guid: 9624919fcbf014b09a100a6c0c706747,
+    type: 2}
+  m_PrefabInternal: {fileID: 716422444}
+--- !u!65 &1295352730
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1295352727}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.7, y: 1.8, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1323625860 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1569323620340248, guid: 9624919fcbf014b09a100a6c0c706747,
+    type: 2}
+  m_PrefabInternal: {fileID: 412276296}
+--- !u!65 &1323625863
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1323625860}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.7, y: 1.8, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1412634869
 GameObject:
   m_ObjectHideFlags: 0
@@ -2092,6 +2147,23 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1412634869}
+--- !u!1 &1696066035 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1569323620340248, guid: 9624919fcbf014b09a100a6c0c706747,
+    type: 2}
+  m_PrefabInternal: {fileID: 299042236}
+--- !u!65 &1696066038
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1696066035}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.7, y: 1.8, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1710513806
 GameObject:
   m_ObjectHideFlags: 0
@@ -2616,7 +2688,7 @@ Prefab:
       objectReference: {fileID: 1970586443}
     - target: {fileID: 1569323620340248, guid: 9624919fcbf014b09a100a6c0c706747, type: 2}
       propertyPath: m_Name
-      value: traffic light (1)
+      value: trafficlight2
       objectReference: {fileID: 0}
     - target: {fileID: 212378140699063124, guid: 9624919fcbf014b09a100a6c0c706747,
         type: 2}

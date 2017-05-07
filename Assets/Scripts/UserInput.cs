@@ -1,11 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UserInput : MonoBehaviour {
 	public GameObject light;
+	public InputField verticalgreen;
+	public InputField horizontalgreen;
+	public InputField cycleTime;
+	public InputField offset;
+	public Toggle vfirst;
 
-	private Hashtable settings;
+	private Dictionary<string, Dictionary<string, int>> settings;
 
 	// Use this for initialization
 	void Start () {
@@ -21,7 +27,6 @@ public class UserInput : MonoBehaviour {
 				Input.mousePosition);
 			RaycastHit hit;
 			if (Physics.Raycast(ray, out hit, 100)) {
-				Debug.Log("and I know what!");
 				Debug.Log(
 					hit.transform.gameObject.name );
 			}
