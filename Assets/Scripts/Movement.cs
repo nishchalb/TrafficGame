@@ -112,7 +112,7 @@ public class Movement : MonoBehaviour {
             Debug.Log("collision");
             nextWaypoint = collision.gameObject.GetComponent<WaypointBehavior>().GetNextWaypoint();
         }
-		if (collision.tag == "StopSign") {
+		else {
 			//Stop the car's velocity
 			Debug.Log("STOP");
 			Vector2 v;
@@ -123,11 +123,9 @@ public class Movement : MonoBehaviour {
 		}
     }
 
-	public void StopSignContinue(int id){
+	public void StopSignContinue(){
 		//If the stop sign calls us, continue moving.
-		if (id == rb.GetInstanceID()) {
-			Debug.Log ("GOOD TO GO");
-			stopped = false;
-		}
+		Debug.Log ("GOOD TO GO");
+		stopped = false;
 	}
 }
