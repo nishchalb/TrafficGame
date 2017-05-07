@@ -7,6 +7,8 @@ TagManager:
   - Car
   - Waypoint
   - Light
+  - SmallBody
+  - LargeBody
   layers:
   - Default
   - TransparentFX
