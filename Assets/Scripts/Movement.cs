@@ -88,7 +88,6 @@ public class Movement : MonoBehaviour {
 			Debug.DrawRay (transform.position, targetDir);
 		}
 
-    }
 
     IEnumerator Turn(Vector3 start, Vector3 end, Transform tform)
     {
