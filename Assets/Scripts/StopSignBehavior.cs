@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class StopSignBehavior : MonoBehaviour {
 
-	public Queue<int> carQueue;
+	public Queue<GameObject> carQueue;
 	private float time;
+	private const int MAX_TIME = 100; 
 
 	// Use this for initialization
 	void Start () {
-		carQueue = new Queue<int> ();
+		carQueue = new Queue<GameObject> ();
 		time = 0;
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 		
@@ -20,11 +21,11 @@ public class StopSignBehavior : MonoBehaviour {
 
 	private void FixedUpdate(){
 		if (time == 0) {
-			if (carQueue.Peek () != 0) {
-				int id = carQueue.Dequeue ();
-				Debug.Log ("Stop Sign GO: " + id);
-				gameObject.SendMessage ("StopSignContinue", id);
-				time = 200;
+			if (carQueue. ToArray().Length > 0) {
+				GameObject car = carQueue.Dequeue ();
+				Debug.Log ("Stop Sign GO: " + car.GetInstanceID());
+				car.GetComponent<Movement> ().StopSignContinue ();
+				time = MAX_TIME;
 			}
 		} else {
 			time--;
@@ -33,12 +34,12 @@ public class StopSignBehavior : MonoBehaviour {
 
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
-		if (collision.tag == "Movement") {
-			int id = collision.attachedRigidbody.GetInstanceID ();
-			Debug.Log ("Stop Sign: " + id);
+		if (collision.tag == "Car") {
+			GameObject id = collision.attachedRigidbody.gameObject;
+			Debug.Log ("Stop Sign: " + id.GetInstanceID());
 			carQueue.Enqueue (id);
 			if (time <= 0) {
-				time = 200;
+				time = MAX_TIME;
 			}
 		} else {
 			Debug.Log ("Something is touching this stop sign");
