@@ -114,6 +114,7 @@ public class Movement : MonoBehaviour {
         }
 		if (collision.tag == "StopSign") {
 			//Stop the car's velocity
+			Debug.Log("STOP");
 			Vector2 v;
 			v.y = 0;
 			v.x = 0;
@@ -125,6 +126,7 @@ public class Movement : MonoBehaviour {
 	public void StopSignContinue(int id){
 		//If the stop sign calls us, continue moving.
 		if (id == rb.GetInstanceID()) {
+			Debug.Log ("GOOD TO GO");
 			stopped = false;
 		}
 	}

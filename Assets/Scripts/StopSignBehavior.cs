@@ -6,6 +6,7 @@ public class StopSignBehavior : MonoBehaviour {
 
 	public Queue<int> carQueue;
 	private float time;
+	private const int MAX_TIME = 100; 
 
 	// Use this for initialization
 	void Start () {
@@ -20,11 +21,11 @@ public class StopSignBehavior : MonoBehaviour {
 
 	private void FixedUpdate(){
 		if (time == 0) {
-			if (carQueue.Peek () != 0) {
+			if (carQueue. ToArray().Length > 0) {
 				int id = carQueue.Dequeue ();
 				Debug.Log ("Stop Sign GO: " + id);
 				gameObject.SendMessage ("StopSignContinue", id);
-				time = 200;
+				time = MAX_TIME;
 			}
 		} else {
 			time--;
@@ -33,12 +34,12 @@ public class StopSignBehavior : MonoBehaviour {
 
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
-		if (collision.tag == "Movement") {
+		if (collision.tag == "Car") {
 			int id = collision.attachedRigidbody.GetInstanceID ();
 			Debug.Log ("Stop Sign: " + id);
 			carQueue.Enqueue (id);
 			if (time <= 0) {
-				time = 200;
+				time = MAX_TIME;
 			}
 		} else {
 			Debug.Log ("Something is touching this stop sign");
