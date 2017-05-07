@@ -34,6 +34,9 @@ public class Movement : MonoBehaviour
 
     private void FixedUpdate()
     {
+		if (stopped) {
+			return;
+		}
         Vector2 offset = nextWaypoint.GetComponent<WaypointBehavior>().GetWaypointOffset();
         targetDir = nextWaypoint.transform.position + new Vector3(offset.x, offset.y, 0) - transform.position;
         Debug.DrawRay(transform.position, targetDir);
@@ -75,6 +78,7 @@ public class Movement : MonoBehaviour
     }
 
 
+
     IEnumerator Turn(Vector3 start, Vector3 end, Transform tform)
     {
         isTurning = true;
@@ -83,7 +87,7 @@ public class Movement : MonoBehaviour
             transform.up = Vector2.Lerp(start, end, f);
             yield return null;
         }
-        Debug.Log(Vector2.Dot(transform.up, end));
+        //Debug.Log(Vector2.Dot(transform.up, end));
         isTurning = false;
     }
 
@@ -110,4 +114,5 @@ public class Movement : MonoBehaviour
             stopped = false;
         }
     }
+
 }
