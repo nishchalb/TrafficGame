@@ -63,8 +63,7 @@ public class Movement : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.up);
         Debug.DrawRay(transform.position, transform.up, Color.green);
         float distance = Vector2.Distance(transform.position, hit.point);
-        Debug.Log(hit.collider.tag);
-        if (hit.collider.tag == "LargeBody" && distance < maxDist && Vector2.Dot(rb.velocity, transform.up) > 0)
+        if (hit.collider != null && hit.collider.tag == "LargeBody" && distance < maxDist && Vector2.Dot(rb.velocity, transform.up) > 0)
         {
             rb.AddForce(rb.velocity.magnitude * -decel * transform.up * (1 / distance));
             // rb.velocity *= 1 - decel * (1/hit.distance);
