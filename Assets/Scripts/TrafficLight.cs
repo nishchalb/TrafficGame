@@ -11,8 +11,8 @@ public class TrafficLight : MonoBehaviour {
 	public InputField cycleTime;
 	public InputField offset;
 	public Toggle vfirst;
-	public Text hlabel;
-	public Text vlabel;
+	public Text hlabel; //temp
+	public Text vlabel; //temp
 
 	private int ctime;
 	private float vgreen;
