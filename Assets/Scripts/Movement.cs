@@ -34,7 +34,7 @@ public class Movement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Debug.Log(stopped);
+        rb.WakeUp();
 		if (stopped) {
 			return;
 		}
@@ -113,6 +113,8 @@ public class Movement : MonoBehaviour
         {
             //Check the state of the light
             GameObject light = collision.gameObject.transform.parent.gameObject;
+            //Debug.Log(light.GetComponent<TrafficLight>().vertical);
+            
             if (light.GetComponent<TrafficLight>().vertical == "green")
             {
                 stopped = false;
@@ -126,7 +128,8 @@ public class Movement : MonoBehaviour
         {
             //Check the state of the light
             GameObject light = collision.gameObject.transform.parent.gameObject;
-            if (light.GetComponent<TrafficLight>().vertical == "green")
+            Debug.Log(light.GetComponent<TrafficLight>().horizontal);
+            if (light.GetComponent<TrafficLight>().horizontal == "green")
             {
                 stopped = false;
             }
