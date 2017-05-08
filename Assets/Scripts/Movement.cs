@@ -34,6 +34,7 @@ public class Movement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        Debug.Log(stopped);
 		if (stopped) {
 			return;
 		}
@@ -103,9 +104,41 @@ public class Movement : MonoBehaviour
 			rb.velocity = Vector2.zero;
 			stopped = true;
 		}
+        
     }
 
-	public void StopSignContinue(){
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.tag == "LightZoneVertical")
+        {
+            //Check the state of the light
+            GameObject light = collision.gameObject.transform.parent.gameObject;
+            if (light.GetComponent<TrafficLight>().vertical == "green")
+            {
+                stopped = false;
+            }
+            else
+            {
+                stopped = true;
+            }
+        }
+        if (collision.tag == "LightZoneHorizontal")
+        {
+            //Check the state of the light
+            GameObject light = collision.gameObject.transform.parent.gameObject;
+            if (light.GetComponent<TrafficLight>().vertical == "green")
+            {
+                stopped = false;
+            }
+            else
+            {
+                
+                stopped = true;
+            }
+        }
+    }
+
+    public void StopSignContinue(){
 		//If the stop sign calls us, continue moving.
 		Debug.Log ("GOOD TO GO");
 		stopped = false;
