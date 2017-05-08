@@ -184,6 +184,10 @@ Prefab:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 1627624838135588, guid: 02ae4e88f0e74cc4a9d921151a1a327d, type: 2}
+      propertyPath: m_Name
+      value: Car
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114604502153868608, guid: 02ae4e88f0e74cc4a9d921151a1a327d, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 02ae4e88f0e74cc4a9d921151a1a327d, type: 2}
@@ -359,7 +363,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4244400831152838, guid: 61bb27327274f4c47995a48de96354a3, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -1.5
+      value: -1.2
       objectReference: {fileID: 0}
     - target: {fileID: 4244400831152838, guid: 61bb27327274f4c47995a48de96354a3, type: 2}
       propertyPath: m_LocalPosition.z
@@ -385,6 +389,20 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 1910300222251608, guid: 61bb27327274f4c47995a48de96354a3, type: 2}
+      propertyPath: m_Name
+      value: NavWaypointH
+      objectReference: {fileID: 0}
+    - target: {fileID: 212963572915499138, guid: 61bb27327274f4c47995a48de96354a3,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: -872343703
+      objectReference: {fileID: 0}
+    - target: {fileID: 212963572915499138, guid: 61bb27327274f4c47995a48de96354a3,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 61bb27327274f4c47995a48de96354a3, type: 2}
   m_IsPrefabParent: 0
@@ -405,7 +423,7 @@ GameObject:
   - component: {fileID: 1904570216}
   - component: {fileID: 1904570215}
   m_Layer: 8
-  m_Name: stopsitn
+  m_Name: StopSign
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -459,7 +477,7 @@ Transform:
   m_GameObject: {fileID: 1904570212}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.82, y: -1.36, z: 0}
-  m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
+  m_LocalScale: {x: 0.14886397, y: 0.14886399, z: 0.14886399}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
