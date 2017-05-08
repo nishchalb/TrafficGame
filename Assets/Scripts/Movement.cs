@@ -92,14 +92,13 @@ public class Movement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Waypoint")
-        {
-            Debug.Log("collision");
-            nextWaypoint = collision.gameObject.GetComponent<WaypointBehavior>().GetNextWaypoint();
-        }
-		if (collision.tag == "StopSign")
+		if (collision.tag == "Waypoint") {
+			Debug.Log ("collision");
+			nextWaypoint = collision.gameObject.GetComponent<WaypointBehavior> ().GetNextWaypoint ();
+		} else if (collision.tag == "StopSign")
 		{
 			//Stop the car's velocity
+			Debug.Log("Stop Sign");
 			rb.velocity = Vector2.zero;
 			stopped = true;
 		}
