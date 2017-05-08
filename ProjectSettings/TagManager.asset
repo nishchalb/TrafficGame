@@ -9,6 +9,8 @@ TagManager:
   - Light
   - SmallBody
   - LargeBody
+  - LightZoneHorizontal
+  - LightZoneVertical
   layers:
   - Default
   - TransparentFX
