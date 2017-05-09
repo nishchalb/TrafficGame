@@ -34,15 +34,15 @@ public class StopSignBehavior : MonoBehaviour {
 
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
-		if (collision.tag == "Car") {
+		//if (collision.tag == "Car") {
 			GameObject id = collision.attachedRigidbody.gameObject;
 			Debug.Log ("Stop Sign: " + id.GetInstanceID());
 			carQueue.Enqueue (id);
 			if (time <= 0) {
 				time = MAX_TIME;
 			}
-		} else {
+		//} else {
 			Debug.Log ("Something is touching this stop sign");
-		}
+		//}
 	}
 }
