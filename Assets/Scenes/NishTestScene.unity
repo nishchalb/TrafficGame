@@ -320,6 +320,11 @@ Prefab:
       propertyPath: nextWaypoints.Array.data[0].wp
       value: 
       objectReference: {fileID: 445385072}
+    - target: {fileID: 61193954692283212, guid: 61bb27327274f4c47995a48de96354a3,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 61bb27327274f4c47995a48de96354a3, type: 2}
   m_IsPrefabParent: 0

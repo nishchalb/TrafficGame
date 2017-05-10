@@ -38,6 +38,7 @@ public class Movement : MonoBehaviour
 		if (stopped) {
 			return;
 		}
+        HandleWaypointCollision();
         Vector2 offset = nextWaypoint.GetComponent<WaypointBehavior>().GetWaypointOffset();
         targetDir = nextWaypoint.transform.position + new Vector3(offset.x, offset.y, 0) - transform.position;
         Debug.DrawRay(transform.position, targetDir);
@@ -93,10 +94,11 @@ public class Movement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-		if (collision.tag == "Waypoint") {
-			Debug.Log ("collision");
-			nextWaypoint = collision.gameObject.GetComponent<WaypointBehavior> ().GetNextWaypoint ();
-		} else if (collision.tag == "StopSign")
+		//if (collision.tag == "Waypoint") {
+		//	Debug.Log ("collision");
+		//	nextWaypoint = collision.gameObject.GetComponent<WaypointBehavior> ().GetNextWaypoint ();
+		//}
+        if (collision.tag == "StopSign")
 		{
 			//Stop the car's velocity
 			Debug.Log("Stop Sign");
@@ -136,6 +138,19 @@ public class Movement : MonoBehaviour
             {
                 
                 stopped = true;
+            }
+        }
+    }
+
+    private void HandleWaypointCollision()
+    {
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, .01f);
+        foreach (Collider2D coll in colliders)
+        {
+            if (coll.tag == "Waypoint" && coll.gameObject.GetInstanceID() == nextWaypoint.GetInstanceID())
+            {
+                Debug.Log("collision");
+                nextWaypoint = coll.gameObject.GetComponent<WaypointBehavior>().GetNextWaypoint();
             }
         }
     }
