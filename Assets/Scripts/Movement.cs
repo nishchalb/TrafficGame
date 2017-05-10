@@ -102,7 +102,6 @@ public class Movement : MonoBehaviour
 		{
 			//Stop the car's velocity
 			Debug.Log("Stop Sign");
-			rb.velocity = Vector2.zero;
 			stopped = true;
 		}
         
