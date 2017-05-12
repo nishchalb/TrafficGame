@@ -11,6 +11,7 @@ TagManager:
   - LargeBody
   - LightZoneHorizontal
   - LightZoneVertical
+  - StopSign
   layers:
   - Default
   - TransparentFX
