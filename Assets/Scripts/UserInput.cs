@@ -41,16 +41,16 @@ public class UserInput : MonoBehaviour {
 				Input.mousePosition);
 			RaycastHit hit;
 			if (Physics.Raycast(ray, out hit, 100)) {
-				if (trafficLight == null) {
-					trafficLight = hit.transform.gameObject.name;
-				}
-				else if (trafficLight != hit.transform.gameObject.name) {
-					ResetInputs ();
-					trafficLight = hit.transform.gameObject.name;
-					if (settings.ContainsKey (trafficLight)) {
-						FillInputs ();
-					}
-				}
+                trafficLight = hit.transform.gameObject.name;
+                if (settings.ContainsKey(trafficLight))
+                {
+                    FillInputs();
+                } else
+                {
+                    ResetInputs();
+                }
+
+
 			}
 		}
 	}
@@ -63,9 +63,8 @@ public class UserInput : MonoBehaviour {
 
 	void FillInputs () {
 		// fill inputs with appropriate vals
-		foreach (string key in settings[trafficLight].Keys) {
+		foreach (string key in mapping.Keys) {
 			Debug.Log ("item is " + key + " " + settings[trafficLight][key]);
-//			Debug.Log ("dic is " + settings [trafficLight].ToString());
 			mapping[key].text = settings[trafficLight][key];
 		}
 
