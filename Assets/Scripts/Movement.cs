@@ -9,7 +9,10 @@ public class Movement : MonoBehaviour
     public float turnRate = 1.0f;
     public float maxVelocity = 10f;
     public float acceleration = 1.0f;
-    public float maxDist;    public float decel;
+    public float maxDist;
+    public float decel;
+	public float waitTime;
+	public float isWaiting;
 
     private Rigidbody2D rb;
     private Vector3 targetDir;
@@ -18,17 +21,28 @@ public class Movement : MonoBehaviour
     private bool isTurning;
 
 
+
     // Use this for initialization
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         stopped = false;
         isTurning = false;
+		waitTime = 0;
+		isWaiting = -1;
     }
 
     // Update is called once per frame
     void Update()
     {
+		if (rb.velocity.magnitude == 0) {
+			if (isWaiting == -1) {
+				isWaiting = Time.time;
+			}
+		} else if (isWaiting != -1) {
+			waitTime = waitTime + Time.time - isWaiting;
+			isWaiting = -1;
+		}
 
     }
 
