@@ -188,6 +188,11 @@ Prefab:
       propertyPath: m_Name
       value: Car
       objectReference: {fileID: 0}
+    - target: {fileID: 50713425790657598, guid: 02ae4e88f0e74cc4a9d921151a1a327d,
+        type: 2}
+      propertyPath: m_LinearDrag
+      value: 0.85
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114604502153868608, guid: 02ae4e88f0e74cc4a9d921151a1a327d, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 02ae4e88f0e74cc4a9d921151a1a327d, type: 2}
@@ -424,7 +429,7 @@ GameObject:
   - component: {fileID: 1904570215}
   m_Layer: 8
   m_Name: StopSign
-  m_TagString: Untagged
+  m_TagString: StopSign
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -505,7 +510,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 7, y: 7}
+  m_Size: {x: 14, y: 15}
   m_EdgeRadius: 0
 --- !u!114 &1904570216
 MonoBehaviour:

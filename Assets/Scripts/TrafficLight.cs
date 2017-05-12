@@ -14,7 +14,10 @@ public class TrafficLight : MonoBehaviour {
 	public Text hlabel; //temp
 	public Text vlabel; //temp
 
-	private int ctime;
+    public Sprite greenSprite;
+    public Sprite redSprite;
+
+    private int ctime;
 	private float vgreen;
 	private float vred;
 	private float hred;
@@ -77,4 +80,16 @@ public class TrafficLight : MonoBehaviour {
 			vlabel.text = "v: " + vertical;
 		}
 	}
+
+    private void FixedUpdate()
+    {
+        SpriteRenderer sr = GetComponent<SpriteRenderer>();
+        if (horizontal == "green")
+        {
+            sr.sprite = greenSprite;
+        } else
+        {
+            sr.sprite = redSprite;
+        }
+    }
 }
