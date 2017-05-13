@@ -31,6 +31,7 @@ public class UserInput : MonoBehaviour {
 		horizontalgreen.onValueChanged.AddListener (delegate {UpdateFields("horizontalgreen"); });
 		cycleTime.onValueChanged.AddListener (delegate {UpdateFields("cycleTime"); });
 		offset.onValueChanged.AddListener (delegate {UpdateFields("offset"); });
+        vfirst.onValueChanged.AddListener(delegate { UpdateFields("vfirst"); });
 		// do for vfirst
 	}
 	
@@ -47,6 +48,7 @@ public class UserInput : MonoBehaviour {
                     FillInputs();
                 } else
                 {
+                    Debug.Log("reset inputs");
                     ResetInputs();
                 }
 
@@ -59,6 +61,7 @@ public class UserInput : MonoBehaviour {
 		horizontalgreen.text = "";
 		cycleTime.text = "";
 		offset.text = "";
+        vfirst.isOn = true;
 	}
 
 	void FillInputs () {
@@ -67,6 +70,7 @@ public class UserInput : MonoBehaviour {
 			Debug.Log ("item is " + key + " " + settings[trafficLight][key]);
 			mapping[key].text = settings[trafficLight][key];
 		}
+        vfirst.isOn = System.Convert.ToBoolean(settings[trafficLight]["vfirst"]);
 
 	}
 
@@ -76,8 +80,29 @@ public class UserInput : MonoBehaviour {
 			if (!settings.ContainsKey (trafficLight)) {
 				settings [trafficLight] = new Dictionary<string, string> ();
 			}
-			settings [trafficLight] [param] = mapping[param].text;
+            if (param == "vfirst")
+            {
+                if (vfirst.isOn) settings[trafficLight][param] = "true";
+                else if (!vfirst.isOn) settings[trafficLight][param] = "false";
+
+            } else
+            {
+                settings[trafficLight][param] = mapping[param].text;
+            }
+			
 			Debug.Log ("inserting into dic " + param + " " + settings[trafficLight][param]);
 		}
 	}
+
+    public Dictionary<string, string> GetSavedSettingsForLight(string traffic)
+    {
+        if (settings.ContainsKey(traffic))
+        {
+            return settings[traffic];
+        } else
+        {
+            return new Dictionary<string, string>();
+        }
+        
+    }
 }
