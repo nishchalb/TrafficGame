@@ -12,6 +12,8 @@ TagManager:
   - LightZoneHorizontal
   - LightZoneVertical
   - StopSign
+  - HorizontalLight
+  - VerticalLight
   layers:
   - Default
   - TransparentFX

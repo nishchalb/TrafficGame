@@ -17,6 +17,8 @@ public class TrafficLight : MonoBehaviour {
     public Sprite greenSprite;
     public Sprite redSprite;
 
+    LightChange[] lights;
+
     private int ctime;
 	private float vgreen;
 	private float vred;
@@ -29,8 +31,9 @@ public class TrafficLight : MonoBehaviour {
 		vertical = "red";
 		horizontal = "red";
 		time = 0;
+        lights = GetComponentsInChildren<LightChange>();
 
-	}
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -79,17 +82,21 @@ public class TrafficLight : MonoBehaviour {
 			hlabel.text = "h: " + horizontal;
 			vlabel.text = "v: " + vertical;
 		}
-	}
+
+        foreach (LightChange lc in lights)
+        {
+            if (lc.gameObject.CompareTag("HorizontalLight"))
+            {
+                lc.setLight(horizontal);
+            } else if (lc.gameObject.CompareTag("VerticalLight"))
+            {
+                lc.setLight(vertical);
+            }
+        }
+
+    }
 
     private void FixedUpdate()
     {
-        SpriteRenderer sr = GetComponent<SpriteRenderer>();
-        if (horizontal == "green")
-        {
-            sr.sprite = greenSprite;
-        } else
-        {
-            sr.sprite = redSprite;
-        }
     }
 }
