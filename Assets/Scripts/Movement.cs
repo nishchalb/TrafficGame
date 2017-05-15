@@ -12,13 +12,14 @@ public class Movement : MonoBehaviour
     public float maxDist;
     public float decel;
 	public float waitTime;
-	public float isWaiting;
+
 
     private Rigidbody2D rb;
     private Vector3 targetDir;
     private float angDiff;
     private bool stopped;
     private bool isTurning;
+	private float isWaiting;
 
 
 
