@@ -10,6 +10,7 @@ public class UserInput : MonoBehaviour {
 	public InputField cycleTime;
 	public InputField offset;
 	public Toggle vfirst;
+	public Text title;
 
 	private Dictionary<string, Dictionary<string, string>> settings;
 	public string trafficLight; // this is determined from the click
@@ -43,12 +44,12 @@ public class UserInput : MonoBehaviour {
 			RaycastHit hit;
 			if (Physics.Raycast(ray, out hit, 100)) {
                 trafficLight = hit.transform.gameObject.name;
+				title.text = hit.transform.gameObject.name;
                 if (settings.ContainsKey(trafficLight))
                 {
                     FillInputs();
                 } else
                 {
-                    Debug.Log("reset inputs");
                     ResetInputs();
                 }
 

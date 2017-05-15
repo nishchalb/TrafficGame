@@ -203,7 +203,7 @@ Prefab:
       objectReference: {fileID: 1257272633}
     - target: {fileID: 1569323620340248, guid: 9624919fcbf014b09a100a6c0c706747, type: 2}
       propertyPath: m_Name
-      value: trafficlight1
+      value: 'Traffic Light #1'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9624919fcbf014b09a100a6c0c706747, type: 2}
@@ -282,6 +282,80 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 383714534}
+--- !u!1 &391109110
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 391109111}
+  - component: {fileID: 391109113}
+  - component: {fileID: 391109112}
+  m_Layer: 5
+  m_Name: title
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &391109111
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 391109110}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1257272632}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 200, y: -110.2}
+  m_SizeDelta: {x: 253.3, y: 50.4}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &391109112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 391109110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 25
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Select a Traffic Light
+--- !u!222 &391109113
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 391109110}
 --- !u!1001 &412276296
 Prefab:
   m_ObjectHideFlags: 0
@@ -358,7 +432,7 @@ Prefab:
       objectReference: {fileID: 1970586443}
     - target: {fileID: 1569323620340248, guid: 9624919fcbf014b09a100a6c0c706747, type: 2}
       propertyPath: m_Name
-      value: trafficlight4
+      value: 'Traffic Light #4'
       objectReference: {fileID: 0}
     - target: {fileID: 212378140699063124, guid: 9624919fcbf014b09a100a6c0c706747,
         type: 2}
@@ -946,7 +1020,7 @@ Prefab:
       objectReference: {fileID: 1970586443}
     - target: {fileID: 1569323620340248, guid: 9624919fcbf014b09a100a6c0c706747, type: 2}
       propertyPath: m_Name
-      value: trafficlight3
+      value: 'Traffic Light #3'
       objectReference: {fileID: 0}
     - target: {fileID: 212378140699063124, guid: 9624919fcbf014b09a100a6c0c706747,
         type: 2}
@@ -1985,6 +2059,7 @@ RectTransform:
   - {fileID: 2045444593}
   - {fileID: 1970586442}
   - {fileID: 752944329}
+  - {fileID: 391109111}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2009,6 +2084,7 @@ MonoBehaviour:
   cycleTime: {fileID: 488873620}
   offset: {fileID: 493674803}
   vfirst: {fileID: 2045444594}
+  title: {fileID: 391109112}
   trafficLight: 
 --- !u!1 &1295352727 stripped
 GameObject:
@@ -2642,7 +2718,7 @@ Prefab:
       objectReference: {fileID: 1970586443}
     - target: {fileID: 1569323620340248, guid: 9624919fcbf014b09a100a6c0c706747, type: 2}
       propertyPath: m_Name
-      value: trafficlight2
+      value: 'Traffic Light #2'
       objectReference: {fileID: 0}
     - target: {fileID: 212378140699063124, guid: 9624919fcbf014b09a100a6c0c706747,
         type: 2}
