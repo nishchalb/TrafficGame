@@ -41,7 +41,7 @@ public class TrafficLight : MonoBehaviour {
 		}
 		if (settings.ContainsKey("cycleTime") && settings["cycleTime"].Length > 0) {
 			ctime = System.Int32.Parse (settings["cycleTime"]);
-			time = (Time.time + offset) % ctime;
+			time = (Time.time - offset) % ctime;
 			if (settings.ContainsKey("verticalgreen") && settings["verticalgreen"].Length > 0) {
 				vgreen = ctime * System.Int32.Parse (settings["verticalgreen"]) / 100.0F;
 				vred = ctime * (1 - System.Int32.Parse (settings["verticalgreen"]) / 100.0F);
@@ -62,23 +62,23 @@ public class TrafficLight : MonoBehaviour {
             }
 
             if (vfirst) {
-				if ((time <= vgreen) && (time >= offset)) {
+				if (((time <= vgreen) && (time > offset % ctime)) || (time <= offset % ctime)) {
 					vertical = "green";
 				} else {
 					vertical = "red";
 				}
-				if ((time <= hred) && (time >= offset)) {
+				if (((time <= hred) && (time > offset)) || (time <= offset % ctime)) {
 					horizontal = "red";
 				} else {
 					horizontal = "green";
 				}
 			} else {
-				if (time <= vred && time >= offset) {
+				if (((time <= vred) && (time > offset)) || (time <= offset % ctime)) {
 					vertical = "red";
 				} else {
 					vertical = "green";
 				}
-				if (time <= hgreen && time >= offset) {
+				if (((time <= hgreen) && (time > offset)) || (time <= offset % ctime)) {
 					horizontal = "green";
 				} else {
 					horizontal = "red";
