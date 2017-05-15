@@ -37,10 +37,12 @@ public class Movement : MonoBehaviour
     void Update()
     {
 		if (rb.velocity.magnitude == 0) {
+			Debug.Log ("car is stopped");
 			if (isWaiting == -1) {
 				isWaiting = Time.time;
 			}
 		} else if (isWaiting != -1) {
+			Debug.Log ("car moving again");
 			waitTime = waitTime + Time.time - isWaiting;
 			isWaiting = -1;
 		}
@@ -170,5 +172,9 @@ public class Movement : MonoBehaviour
 		//If the stop sign calls us, continue moving.
 		Debug.Log ("GOOD TO GO");
 		stopped = false;
+	}
+
+	public float RetrieveWaitTime() {
+		return waitTime;
 	}
 }
