@@ -7,7 +7,7 @@ public class TrafficLight : MonoBehaviour {
 	public string vertical;
 	public string horizontal;
 
-    public UserInput userInput;
+    private UserInput userInput;
 
     private LightChange[] lights;
 
@@ -27,6 +27,7 @@ public class TrafficLight : MonoBehaviour {
 		time = 0;
         lights = GetComponentsInChildren<LightChange>();
         vfirst = true;
+        userInput = GameObject.FindGameObjectWithTag("Canvas").GetComponent<UserInput>();
     }
 	
 	// Update is called once per frame
