@@ -49,9 +49,22 @@ public class Movement : MonoBehaviour
     private void FixedUpdate()
     {
         rb.WakeUp();
+
+		// Dont run into other cars
+		RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.up);
+		Debug.DrawRay(transform.position, transform.up, Color.green);
+		float distance = Vector2.Distance(transform.position, hit.point);
+		if (hit.collider != null && hit.collider.tag == "LargeBody" && distance < maxDist  && Vector2.Dot(rb.velocity, transform.up) > 0)
+		{
+			Debug.Log ("HIT");
+			return;
+		}
+
+		//If it's waiting, don't move
 		if (stopped) {
 			return;
 		}
+
         HandleWaypointCollision();
         Vector2 offset = nextWaypoint.GetComponent<WaypointBehavior>().GetWaypointOffset();
         targetDir = nextWaypoint.transform.position + new Vector3(offset.x, offset.y, 0) - transform.position;
@@ -74,22 +87,6 @@ public class Movement : MonoBehaviour
                 rb.AddForce(transform.up * acceleration);
             }
         }
-
-        // Dont run into other cars
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.up);
-        Debug.DrawRay(transform.position, transform.up, Color.green);
-        float distance = Vector2.Distance(transform.position, hit.point);
-        if (hit.collider != null && hit.collider.tag == "LargeBody" && distance < maxDist && Vector2.Dot(rb.velocity, transform.up) > 0)
-        {
-            rb.AddForce(rb.velocity.magnitude * -decel * transform.up * (1 / distance));
-            // rb.velocity *= 1 - decel * (1/hit.distance);
-            if (Vector2.Dot(rb.velocity, transform.up) < 0 || distance < 1.5)
-            {
-                rb.velocity = Vector2.zero;
-            }
-        }
-
-        
     }
 
 
