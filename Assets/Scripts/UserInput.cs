@@ -58,6 +58,7 @@ public class UserInput : MonoBehaviour {
 		}
 	}
 	void ResetInputs () {
+		Debug.Log ("reset inputs is called");
 		verticalgreen.text = "";
 		horizontalgreen.text = "";
 		cycleTime.text = "";
@@ -79,7 +80,14 @@ public class UserInput : MonoBehaviour {
 		// if trafficLight null, ask which traffic light?
 		if (trafficLight != null) {
 			if (!settings.ContainsKey (trafficLight)) {
-				settings [trafficLight] = new Dictionary<string, string> ();
+				settings [trafficLight] = new Dictionary<string, string>()
+				{
+					{"verticalgreen", ""},
+					{"horizontalgreen", ""},
+					{"cycleTime", ""},
+					{"offset", ""},
+					{"vfirst", "true"}
+				};
 			}
             if (param == "vfirst")
             {
@@ -97,13 +105,11 @@ public class UserInput : MonoBehaviour {
 
     public Dictionary<string, string> GetSavedSettingsForLight(string traffic)
     {
-        if (settings.ContainsKey(traffic))
-        {
-            return settings[traffic];
-        } else
-        {
-            return new Dictionary<string, string>();
-        }
+		if (settings.ContainsKey (traffic)) {
+			return settings [traffic];
+		} else {
+			return new Dictionary<string, string> ();
+		}
         
     }
 }
