@@ -62,28 +62,31 @@ public class TrafficLight : MonoBehaviour {
             }
 
             if (vfirst) {
-				if ((time <= vgreen) && (time > offset)) {
+				if ((time <= vgreen) && (time >= offset)) {
 					vertical = "green";
 				} else {
 					vertical = "red";
 				}
-				if ((time <= hred) && (time > offset)) {
+				if ((time <= hred) && (time >= offset)) {
 					horizontal = "red";
 				} else {
 					horizontal = "green";
 				}
 			} else {
-				if (time <= vred && time > offset) {
+				if (time <= vred && time >= offset) {
 					vertical = "red";
 				} else {
 					vertical = "green";
 				}
-				if (time <= hgreen && time > offset) {
+				if (time <= hgreen && time >= offset) {
 					horizontal = "green";
 				} else {
 					horizontal = "red";
 				}
-			}
+			} if (vgreen == 0)
+				vertical = "red";
+			if (hgreen == 0)
+				horizontal = "red";
 		}
 
         foreach (LightChange lc in lights)
