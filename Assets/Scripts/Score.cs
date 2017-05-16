@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Score : MonoBehaviour {
 
@@ -10,6 +11,7 @@ public class Score : MonoBehaviour {
 	public float mean;
 	public int vFactor;
 	public int mFactor;
+	public Text viewscore;
 
 	private float[] waits;
 	private GameObject[] cars; // make into list for variance
@@ -19,7 +21,7 @@ public class Score : MonoBehaviour {
 		mean = 0;
 		variance = 0;
 		vFactor = 10;
-		mFactor = 20
+		mFactor = 20;
 	}
 	
 	// Update is called once per frame
@@ -34,6 +36,7 @@ public class Score : MonoBehaviour {
 		mean = Average (waits);
 		variance = Variance (waits, mean);
 		score = (mFactor * mean + vFactor * variance).ToString ();
+		viewscore.text = score;
 
 	}
 
