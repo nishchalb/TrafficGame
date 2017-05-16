@@ -1524,7 +1524,7 @@ GameObject:
   - component: {fileID: 1030468351}
   - component: {fileID: 1030468350}
   m_Layer: 5
-  m_Name: score
+  m_Name: viewscore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1803,7 +1803,9 @@ MonoBehaviour:
   score: 
   variance: 0
   mean: 0
-  factor: 0
+  vFactor: 0
+  mFactor: 0
+  viewscore: {fileID: 1030468350}
 --- !u!1 &1108368572
 GameObject:
   m_ObjectHideFlags: 0
