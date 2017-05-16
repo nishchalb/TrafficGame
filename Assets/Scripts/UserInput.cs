@@ -37,6 +37,12 @@ public class UserInput : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            float newVal = Time.timeScale == 0 ? 1f : 0f;
+            Time.timeScale = newVal;
+        }
+
 		if (Input.GetMouseButtonDown(0)) {
 			Ray ray = Camera.main.ScreenPointToRay(
 				Input.mousePosition);
