@@ -164,6 +164,10 @@ public class Movement : MonoBehaviour
             {
                 Debug.Log("collision");
                 nextWaypoint = coll.gameObject.GetComponent<WaypointBehavior>().GetNextWaypoint();
+                if (nextWaypoint == null)
+                {
+                    Destroy(gameObject);
+                }
             }
         }
     }

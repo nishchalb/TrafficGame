@@ -33,6 +33,7 @@ public class WaypointBehavior : MonoBehaviour {
         {
             if (waypoint.rangeMin <= val && waypoint.rangeMax >= val) return waypoint.wp;
         }
+        if (nextWaypoints.Length == 0) return null; //I feel so dirty doing this
         return nextWaypoints[0].wp;
     }
 
