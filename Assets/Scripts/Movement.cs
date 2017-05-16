@@ -18,7 +18,7 @@ public class Movement : MonoBehaviour
     private float angDiff;
     public bool stopped;
     private bool isTurning;
-	private float isWaiting;
+	public float isWaiting;
     private Vector2 size;
     public bool inIntersection;
 
@@ -42,6 +42,7 @@ public class Movement : MonoBehaviour
 		if (rb.velocity.magnitude == 0) {
 			if (isWaiting == -1) {
 				isWaiting = Time.time;
+				waitTime = isWaiting; // take out
 			}
 		} else if (isWaiting != -1) {
 			Debug.Log ("car moving again");
@@ -59,7 +60,7 @@ public class Movement : MonoBehaviour
         // RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.up);
         int layerMask = LayerMask.GetMask("Car");
         RaycastHit2D hit = Physics2D.BoxCast(transform.position, size, rb.rotation, transform.up, 15, layerMask);
-        if (hit.collider != null) Debug.Log(hit.collider.tag);
+        //if (hit.collider != null) Debug.Log(hit.collider.tag);
 		float distance = hit.transform == null ? 0 : Vector2.Distance(transform.position, hit.transform.position);
         float mDist = 3*rb.velocity.magnitude+1;
         

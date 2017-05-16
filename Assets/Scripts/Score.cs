@@ -8,7 +8,8 @@ public class Score : MonoBehaviour {
 
 	public float variance;
 	public float mean;
-	public int factor;
+	public int vFactor;
+	public int mFactor;
 
 	private float[] waits;
 	private GameObject[] cars; // make into list for variance
@@ -17,12 +18,14 @@ public class Score : MonoBehaviour {
 	void Start () {
 		mean = 0;
 		variance = 0;
+		vFactor = 10;
+		mFactor = 20
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		waits = new float[cars.Length];
 		cars = GameObject.FindGameObjectsWithTag ("Car");
+		waits = new float[cars.Length];
 		int i = 0;
 		foreach (GameObject car in cars) {
 			waits [i] = car.GetComponent<Movement>().RetrieveWaitTime(); // should be equal to car's waittime
@@ -30,7 +33,7 @@ public class Score : MonoBehaviour {
 		}
 		mean = Average (waits);
 		variance = Variance (waits, mean);
-		score = (mean + factor * variance).ToString ();
+		score = (mFactor * mean + vFactor * variance).ToString ();
 
 	}
 
