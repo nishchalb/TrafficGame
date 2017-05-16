@@ -19,7 +19,6 @@ public class UserInput : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		Debug.Log ("UserInput is working");
 		settings = new Dictionary<string, Dictionary<string, string>> ();
 		mapping = new Dictionary<string, InputField>()
 		{

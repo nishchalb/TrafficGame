@@ -459,11 +459,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4907910880081362, guid: 02ae4e88f0e74cc4a9d921151a1a327d, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -2.7
+      value: -2.5
       objectReference: {fileID: 0}
     - target: {fileID: 4907910880081362, guid: 02ae4e88f0e74cc4a9d921151a1a327d, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -2.59
+      value: -2.638
       objectReference: {fileID: 0}
     - target: {fileID: 4907910880081362, guid: 02ae4e88f0e74cc4a9d921151a1a327d, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1699,6 +1699,7 @@ MonoBehaviour:
   cycleTime: {fileID: 0}
   offset: {fileID: 0}
   vfirst: {fileID: 0}
+  title: {fileID: 0}
   trafficLight: 
 --- !u!114 &1076196416
 MonoBehaviour:
@@ -1802,6 +1803,7 @@ MonoBehaviour:
   score: 
   variance: 0
   mean: 0
+  factor: 0
 --- !u!1 &1108368572
 GameObject:
   m_ObjectHideFlags: 0

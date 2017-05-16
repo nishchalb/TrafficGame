@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114584825305323636}
   - component: {fileID: 50713425790657598}
   - component: {fileID: 58148042980578432}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Car
   m_TagString: Car
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 33608113500519834}
   - component: {fileID: 65397007011282276}
   - component: {fileID: 23864086981186418}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58,7 +58,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4543655927521960}
   - component: {fileID: 61415098896490562}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BigCollider
   m_TagString: LargeBody
   m_Icon: {fileID: 0}
@@ -196,7 +196,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0.77
+  m_LinearDrag: 1.5
   m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -271,5 +271,7 @@ MonoBehaviour:
   turnRate: 0.1
   maxVelocity: 10
   acceleration: 1
-  maxDist: 2
-  decel: 6
+  maxDist: 3
+  waitTime: 0
+  stopped: 0
+  inIntersection: 0

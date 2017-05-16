@@ -9,6 +9,8 @@ public class Spawner : MonoBehaviour {
     public GameObject car;
     public int totalCars;
 
+    private Collider2D coll;
+
 	// Use this for initialization
 	void Start () {
         StartCoroutine(Spawn());
@@ -24,8 +26,12 @@ public class Spawner : MonoBehaviour {
         for (int i = 0; i<totalCars; i++)
         {
             yield return new WaitForSeconds(spawnRate);
-            GameObject newCar = Instantiate(car, transform.position, transform.rotation);
-            newCar.GetComponent<Movement>().nextWaypoint = waypoint;
+            coll = Physics2D.OverlapCircle(transform.position, 2, LayerMask.GetMask("Car"));
+            if (coll == null)
+            {
+                GameObject newCar = Instantiate(car, transform.position, transform.rotation);
+                newCar.GetComponent<Movement>().nextWaypoint = waypoint;
+            }
         }
     }
 }

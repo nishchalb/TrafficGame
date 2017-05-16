@@ -10,16 +10,17 @@ public class Movement : MonoBehaviour
     public float maxVelocity = 10f;
     public float acceleration = 1.0f;
     public float maxDist;
-    public float decel;
 	public float waitTime;
 
 
     private Rigidbody2D rb;
     private Vector3 targetDir;
     private float angDiff;
-    private bool stopped;
+    public bool stopped;
     private bool isTurning;
 	private float isWaiting;
+    private Vector2 size;
+    public bool inIntersection;
 
 
 
@@ -31,13 +32,14 @@ public class Movement : MonoBehaviour
         isTurning = false;
 		waitTime = 0;
 		isWaiting = -1;
+        size = new Vector2(.7f, 1f);
+        inIntersection = false;
     }
 
     // Update is called once per frame
     void Update()
     {
 		if (rb.velocity.magnitude == 0) {
-			Debug.Log ("car is stopped");
 			if (isWaiting == -1) {
 				isWaiting = Time.time;
 			}
@@ -53,15 +55,25 @@ public class Movement : MonoBehaviour
     {
         rb.WakeUp();
 
-		// Dont run into other cars
-		RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.up);
-		Debug.DrawRay(transform.position, transform.up, Color.green);
-		float distance = Vector2.Distance(transform.position, hit.point);
-		if (hit.collider != null && hit.collider.tag == "LargeBody" && distance < maxDist  && Vector2.Dot(rb.velocity, transform.up) > 0)
+        // Dont run into other cars
+        // RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.up);
+        int layerMask = LayerMask.GetMask("Car");
+        RaycastHit2D hit = Physics2D.BoxCast(transform.position, size, rb.rotation, transform.up, 15, layerMask);
+        if (hit.collider != null) Debug.Log(hit.collider.tag);
+		float distance = hit.transform == null ? 0 : Vector2.Distance(transform.position, hit.transform.position);
+        float mDist = 3*rb.velocity.magnitude+1;
+        
+		if (hit.collider != null && (hit.collider.tag == "LargeBody" || hit.collider.tag == "Car") && distance < mDist  && Vector2.Dot(rb.velocity, transform.up) > 0)
 		{
-			Debug.Log ("HIT");
+            Debug.DrawRay(transform.position, mDist * transform.up, Color.red);
+            //Debug.Log ("HIT");
+            //Debug.DrawLine(transform.position, hit.transform.position, Color.red);
 			return;
 		}
+        if (inIntersection)
+        {
+            stopped = false;
+        }
 
 		//If it's waiting, don't move
 		if (stopped) {
@@ -71,7 +83,6 @@ public class Movement : MonoBehaviour
         HandleWaypointCollision();
         Vector2 offset = nextWaypoint.GetComponent<WaypointBehavior>().GetWaypointOffset();
         targetDir = nextWaypoint.transform.position + new Vector3(offset.x, offset.y, 0) - transform.position;
-        Debug.DrawRay(transform.position, targetDir);
 
         float cosine = Vector2.Dot(transform.up, targetDir.normalized);
 
@@ -118,7 +129,19 @@ public class Movement : MonoBehaviour
 			Debug.Log("Stop Sign");
 			stopped = true;
 		}
+        else if (collision.tag == "MiddleZone")
+        {
+            inIntersection = true;
+        }
         
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == "MiddleZone")
+        {
+            inIntersection = false;
+        }
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -135,22 +158,27 @@ public class Movement : MonoBehaviour
             }
             else
             {
-                stopped = true;
+                if (!inIntersection)
+                {
+                    stopped = true;
+                }
             }
         }
         if (collision.tag == "LightZoneHorizontal")
         {
             //Check the state of the light
             GameObject light = collision.gameObject.transform.parent.gameObject;
-            Debug.Log(light.GetComponent<TrafficLight>().horizontal);
             if (light.GetComponent<TrafficLight>().horizontal == "green")
             {
                 stopped = false;
             }
             else
             {
-                
-                stopped = true;
+
+                if (!inIntersection)
+                {
+                    stopped = true;
+                }
             }
         }
     }
