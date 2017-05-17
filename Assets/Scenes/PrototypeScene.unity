@@ -380,7 +380,7 @@ Prefab:
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
       propertyPath: nextWaypoints.Array.data[1].rangeMax
-      value: 0.6
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
@@ -390,22 +390,22 @@ Prefab:
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
       propertyPath: nextWaypoints.Array.data[2].rangeMax
-      value: 1
+      value: 1.1
       objectReference: {fileID: 0}
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
       propertyPath: nextWaypoints.Array.data[0].rangeMax
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
       propertyPath: nextWaypoints.Array.data[1].rangeMin
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
       propertyPath: nextWaypoints.Array.data[2].rangeMin
-      value: 0.6
+      value: 0.75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 61bb27327274f4c47995a48de96354a3, type: 2}
@@ -1351,7 +1351,7 @@ MonoBehaviour:
   waypoint: {fileID: 4998803}
   spawnRate: 10
   car: {fileID: 1627624838135588, guid: 02ae4e88f0e74cc4a9d921151a1a327d, type: 2}
-  totalCars: 10
+  totalCars: 5
 --- !u!4 &159247148
 Transform:
   m_ObjectHideFlags: 0
@@ -1534,7 +1534,7 @@ Prefab:
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
       propertyPath: nextWaypoints.Array.data[1].rangeMax
-      value: 0.6
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
@@ -1544,22 +1544,22 @@ Prefab:
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
       propertyPath: nextWaypoints.Array.data[2].rangeMax
-      value: 1
+      value: 1.1
       objectReference: {fileID: 0}
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
       propertyPath: nextWaypoints.Array.data[0].rangeMax
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
       propertyPath: nextWaypoints.Array.data[1].rangeMin
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
       propertyPath: nextWaypoints.Array.data[2].rangeMin
-      value: 0.6
+      value: 0.75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 61bb27327274f4c47995a48de96354a3, type: 2}
@@ -2121,6 +2121,7 @@ MonoBehaviour:
   horizontalgreen: {fileID: 901392156}
   cycleTime: {fileID: 154678333}
   offset: {fileID: 506830264}
+  pauseTip: {fileID: 1379216123}
   vfirst: {fileID: 127005460}
   title: {fileID: 1114676986}
   trafficLight: 
@@ -3922,7 +3923,7 @@ Prefab:
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
       propertyPath: nextWaypoints.Array.data[1].rangeMax
-      value: 0.6
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
@@ -3932,22 +3933,22 @@ Prefab:
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
       propertyPath: nextWaypoints.Array.data[2].rangeMax
-      value: 1
+      value: 1.1
       objectReference: {fileID: 0}
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
       propertyPath: nextWaypoints.Array.data[0].rangeMax
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
       propertyPath: nextWaypoints.Array.data[1].rangeMin
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
       propertyPath: nextWaypoints.Array.data[2].rangeMin
-      value: 0.6
+      value: 0.75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 61bb27327274f4c47995a48de96354a3, type: 2}
@@ -4773,7 +4774,7 @@ Prefab:
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
       propertyPath: nextWaypoints.Array.data[1].rangeMax
-      value: 0.6
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
@@ -4783,22 +4784,22 @@ Prefab:
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
       propertyPath: nextWaypoints.Array.data[2].rangeMax
-      value: 1
+      value: 1.1
       objectReference: {fileID: 0}
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
       propertyPath: nextWaypoints.Array.data[0].rangeMax
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
       propertyPath: nextWaypoints.Array.data[1].rangeMin
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
       propertyPath: nextWaypoints.Array.data[2].rangeMin
-      value: 0.6
+      value: 0.75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 61bb27327274f4c47995a48de96354a3, type: 2}
@@ -5380,7 +5381,7 @@ Prefab:
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
       propertyPath: nextWaypoints.Array.data[1].rangeMax
-      value: 0.6
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
@@ -5390,22 +5391,22 @@ Prefab:
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
       propertyPath: nextWaypoints.Array.data[2].rangeMax
-      value: 1
+      value: 1.1
       objectReference: {fileID: 0}
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
       propertyPath: nextWaypoints.Array.data[0].rangeMax
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
       propertyPath: nextWaypoints.Array.data[1].rangeMin
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
       propertyPath: nextWaypoints.Array.data[2].rangeMin
-      value: 0.6
+      value: 0.75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 61bb27327274f4c47995a48de96354a3, type: 2}
@@ -5950,7 +5951,7 @@ Prefab:
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
       propertyPath: nextWaypoints.Array.data[1].rangeMax
-      value: 0.6
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
@@ -5960,22 +5961,22 @@ Prefab:
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
       propertyPath: nextWaypoints.Array.data[2].rangeMax
-      value: 1
+      value: 1.1
       objectReference: {fileID: 0}
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
       propertyPath: nextWaypoints.Array.data[0].rangeMax
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
       propertyPath: nextWaypoints.Array.data[1].rangeMin
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
       propertyPath: nextWaypoints.Array.data[2].rangeMin
-      value: 0.6
+      value: 0.75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 61bb27327274f4c47995a48de96354a3, type: 2}
@@ -6298,7 +6299,7 @@ Prefab:
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
       propertyPath: nextWaypoints.Array.data[1].rangeMax
-      value: 0.6
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
@@ -6313,17 +6314,17 @@ Prefab:
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
       propertyPath: nextWaypoints.Array.data[0].rangeMax
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
       propertyPath: nextWaypoints.Array.data[1].rangeMin
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
       propertyPath: nextWaypoints.Array.data[2].rangeMin
-      value: 0.6
+      value: 0.75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 61bb27327274f4c47995a48de96354a3, type: 2}
@@ -6714,7 +6715,7 @@ MonoBehaviour:
   waypoint: {fileID: 634080065}
   spawnRate: 10
   car: {fileID: 1627624838135588, guid: 02ae4e88f0e74cc4a9d921151a1a327d, type: 2}
-  totalCars: 10
+  totalCars: 5
 --- !u!4 &1206474389
 Transform:
   m_ObjectHideFlags: 0
@@ -6871,7 +6872,7 @@ Prefab:
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
       propertyPath: nextWaypoints.Array.data[1].rangeMax
-      value: 0.6
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
@@ -6881,22 +6882,22 @@ Prefab:
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
       propertyPath: nextWaypoints.Array.data[2].rangeMax
-      value: 1
+      value: 1.1
       objectReference: {fileID: 0}
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
       propertyPath: nextWaypoints.Array.data[0].rangeMax
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
       propertyPath: nextWaypoints.Array.data[1].rangeMin
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
       propertyPath: nextWaypoints.Array.data[2].rangeMin
-      value: 0.6
+      value: 0.75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 61bb27327274f4c47995a48de96354a3, type: 2}
@@ -7710,7 +7711,7 @@ Prefab:
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
       propertyPath: nextWaypoints.Array.data[1].rangeMax
-      value: 0.6
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
@@ -7720,22 +7721,22 @@ Prefab:
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
       propertyPath: nextWaypoints.Array.data[2].rangeMax
-      value: 1
+      value: 1.1
       objectReference: {fileID: 0}
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
       propertyPath: nextWaypoints.Array.data[0].rangeMax
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
       propertyPath: nextWaypoints.Array.data[1].rangeMin
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
       propertyPath: nextWaypoints.Array.data[2].rangeMin
-      value: 0.6
+      value: 0.75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 61bb27327274f4c47995a48de96354a3, type: 2}
@@ -7960,7 +7961,7 @@ Prefab:
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
       propertyPath: nextWaypoints.Array.data[1].rangeMax
-      value: 0.6
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
@@ -7970,22 +7971,22 @@ Prefab:
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
       propertyPath: nextWaypoints.Array.data[2].rangeMax
-      value: 1
+      value: 1.1
       objectReference: {fileID: 0}
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
       propertyPath: nextWaypoints.Array.data[0].rangeMax
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
       propertyPath: nextWaypoints.Array.data[1].rangeMin
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
       propertyPath: nextWaypoints.Array.data[2].rangeMin
-      value: 0.6
+      value: 0.75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 61bb27327274f4c47995a48de96354a3, type: 2}
@@ -8218,7 +8219,7 @@ Prefab:
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
       propertyPath: nextWaypoints.Array.data[1].rangeMax
-      value: 0.6
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
@@ -8228,22 +8229,22 @@ Prefab:
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
       propertyPath: nextWaypoints.Array.data[2].rangeMax
-      value: 1
+      value: 1.1
       objectReference: {fileID: 0}
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
       propertyPath: nextWaypoints.Array.data[0].rangeMax
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
       propertyPath: nextWaypoints.Array.data[1].rangeMin
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
       propertyPath: nextWaypoints.Array.data[2].rangeMin
-      value: 0.6
+      value: 0.75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 61bb27327274f4c47995a48de96354a3, type: 2}
@@ -9621,7 +9622,7 @@ Prefab:
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
       propertyPath: nextWaypoints.Array.data[1].rangeMax
-      value: 0.6
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
@@ -9631,22 +9632,22 @@ Prefab:
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
       propertyPath: nextWaypoints.Array.data[2].rangeMax
-      value: 1
+      value: 1.1
       objectReference: {fileID: 0}
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
       propertyPath: nextWaypoints.Array.data[0].rangeMax
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
       propertyPath: nextWaypoints.Array.data[1].rangeMin
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
       propertyPath: nextWaypoints.Array.data[2].rangeMin
-      value: 0.6
+      value: 0.75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 61bb27327274f4c47995a48de96354a3, type: 2}
@@ -9964,7 +9965,7 @@ Prefab:
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
       propertyPath: nextWaypoints.Array.data[1].rangeMax
-      value: 0.6
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
@@ -9974,22 +9975,22 @@ Prefab:
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
       propertyPath: nextWaypoints.Array.data[2].rangeMax
-      value: 1
+      value: 1.1
       objectReference: {fileID: 0}
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
       propertyPath: nextWaypoints.Array.data[0].rangeMax
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
       propertyPath: nextWaypoints.Array.data[1].rangeMin
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
       propertyPath: nextWaypoints.Array.data[2].rangeMin
-      value: 0.6
+      value: 0.75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 61bb27327274f4c47995a48de96354a3, type: 2}
@@ -10445,7 +10446,7 @@ Prefab:
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
       propertyPath: nextWaypoints.Array.data[1].rangeMax
-      value: 0.6
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
@@ -10455,22 +10456,22 @@ Prefab:
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
       propertyPath: nextWaypoints.Array.data[2].rangeMax
-      value: 1
+      value: 1.1
       objectReference: {fileID: 0}
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
       propertyPath: nextWaypoints.Array.data[0].rangeMax
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
       propertyPath: nextWaypoints.Array.data[1].rangeMin
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
       propertyPath: nextWaypoints.Array.data[2].rangeMin
-      value: 0.6
+      value: 0.75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 61bb27327274f4c47995a48de96354a3, type: 2}
@@ -10668,7 +10669,7 @@ Prefab:
         type: 2}
       propertyPath: nextWaypoints.Array.data[0].wp
       value: 
-      objectReference: {fileID: 664480625}
+      objectReference: {fileID: 228680212}
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
       propertyPath: nextWaypoints.Array.data[1].wp
@@ -10677,7 +10678,7 @@ Prefab:
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
       propertyPath: nextWaypoints.Array.data[1].rangeMax
-      value: 0.6
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
@@ -10687,22 +10688,22 @@ Prefab:
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
       propertyPath: nextWaypoints.Array.data[2].rangeMax
-      value: 1
+      value: 1.1
       objectReference: {fileID: 0}
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
       propertyPath: nextWaypoints.Array.data[0].rangeMax
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
       propertyPath: nextWaypoints.Array.data[1].rangeMin
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 114239128666858992, guid: 61bb27327274f4c47995a48de96354a3,
         type: 2}
       propertyPath: nextWaypoints.Array.data[2].rangeMin
-      value: 0.6
+      value: 0.75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 61bb27327274f4c47995a48de96354a3, type: 2}

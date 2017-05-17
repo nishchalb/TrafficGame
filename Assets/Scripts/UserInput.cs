@@ -9,6 +9,7 @@ public class UserInput : MonoBehaviour {
 	public InputField horizontalgreen;
 	public InputField cycleTime;
 	public InputField offset;
+    public Text pauseTip;
 	public Toggle vfirst;
 	public Text title;
 
@@ -40,6 +41,7 @@ public class UserInput : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Space))
         {
             float newVal = Time.timeScale == 0 ? 1f : 0f;
+            pauseTip.text = newVal == 0 ? "Game is paused!": "Press space to pause!";
             Time.timeScale = newVal;
         }
 
