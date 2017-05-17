@@ -3122,6 +3122,12 @@ Prefab:
       propertyPath: m_Name
       value: trafficlight4
       objectReference: {fileID: 0}
+    - target: {fileID: 212378140699063124, guid: 9624919fcbf014b09a100a6c0c706747,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a632173e0d878004db59de72b3c5ddca,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9624919fcbf014b09a100a6c0c706747, type: 2}
   m_IsPrefabParent: 0
@@ -6806,6 +6812,12 @@ Prefab:
       propertyPath: m_Offset.x
       value: -0.05
       objectReference: {fileID: 0}
+    - target: {fileID: 212378140699063124, guid: 9624919fcbf014b09a100a6c0c706747,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c5531ce26d22d34418a17d6795ce08f4,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9624919fcbf014b09a100a6c0c706747, type: 2}
   m_IsPrefabParent: 0
@@ -7270,6 +7282,12 @@ Prefab:
       propertyPath: m_Name
       value: trafficlight1
       objectReference: {fileID: 0}
+    - target: {fileID: 212378140699063124, guid: 9624919fcbf014b09a100a6c0c706747,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 6fa88782de89d194d9311d56967a564f,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9624919fcbf014b09a100a6c0c706747, type: 2}
   m_IsPrefabParent: 0
@@ -9762,6 +9780,12 @@ Prefab:
       propertyPath: m_Name
       value: trafficlight2
       objectReference: {fileID: 0}
+    - target: {fileID: 212378140699063124, guid: 9624919fcbf014b09a100a6c0c706747,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3f81aa41ebce7b345a17a93e9f7733cb,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9624919fcbf014b09a100a6c0c706747, type: 2}
   m_IsPrefabParent: 0
