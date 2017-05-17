@@ -196,7 +196,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 1.5
+  m_LinearDrag: 5
   m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -269,9 +269,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextWaypoint: {fileID: 0}
   turnRate: 0.1
-  maxVelocity: 10
-  acceleration: 1
+  maxVelocity: 6
+  acceleration: 4
   maxDist: 3
   waitTime: 0
   stopped: 0
+  isWaiting: 0
   inIntersection: 0
