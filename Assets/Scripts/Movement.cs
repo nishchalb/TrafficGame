@@ -11,6 +11,7 @@ public class Movement : MonoBehaviour
     public float acceleration = 1.0f;
     public float maxDist;
 	public float waitTime;
+    private Score score;
 
 
     private Rigidbody2D rb;
@@ -34,6 +35,7 @@ public class Movement : MonoBehaviour
 		isWaiting = -1;
         size = new Vector2(.7f, 1f);
         inIntersection = false;
+        score = GameObject.Find("Canvas").GetComponent<Score>();
     }
 
     // Update is called once per frame
@@ -195,6 +197,7 @@ public class Movement : MonoBehaviour
                 nextWaypoint = coll.gameObject.GetComponent<WaypointBehavior>().GetNextWaypoint();
                 if (nextWaypoint == null)
                 {
+                    score.carsLeft -= 1;
                     Destroy(gameObject);
                 }
             }

@@ -12,6 +12,10 @@ public class Score : MonoBehaviour {
 	public int vFactor;
 	public int mFactor;
 	public Text viewscore;
+    public Text viewcars;
+
+    public Spawner[] spawners;
+    public int carsLeft;
 
 	private float[] waits;
 	private GameObject[] cars; // make into list for variance
@@ -22,6 +26,11 @@ public class Score : MonoBehaviour {
 		variance = 0;
 		vFactor = 10;
 		mFactor = 20;
+        carsLeft = 0;
+        foreach(Spawner s in spawners)
+        {
+            carsLeft += s.totalCars;
+        }
 	}
 	
 	// Update is called once per frame
@@ -37,6 +46,7 @@ public class Score : MonoBehaviour {
 		variance = Variance (waits, mean);
 		score = (mFactor * mean + vFactor * variance).ToString ();
 		viewscore.text = score;
+        viewcars.text = carsLeft.ToString();
 
 	}
 

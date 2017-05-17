@@ -2206,6 +2206,8 @@ RectTransform:
   - {fileID: 1379216122}
   - {fileID: 438871705}
   - {fileID: 262045003}
+  - {fileID: 926440055}
+  - {fileID: 651481462}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2231,6 +2233,17 @@ MonoBehaviour:
   vFactor: 0
   mFactor: 0
   viewscore: {fileID: 438871706}
+  viewcars: {fileID: 651481460}
+  spawners:
+  - {fileID: 159247147}
+  - {fileID: 1206474388}
+  - {fileID: 2006110614}
+  - {fileID: 1783427639}
+  - {fileID: 1702344756}
+  - {fileID: 1488978888}
+  - {fileID: 1524218469}
+  - {fileID: 1315876425}
+  carsLeft: 0
 --- !u!1001 &338230541
 Prefab:
   m_ObjectHideFlags: 0
@@ -4154,6 +4167,80 @@ GameObject:
   m_PrefabParentObject: {fileID: 1910300222251608, guid: 61bb27327274f4c47995a48de96354a3,
     type: 2}
   m_PrefabInternal: {fileID: 635464957}
+--- !u!1 &651481459
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 651481462}
+  - component: {fileID: 651481461}
+  - component: {fileID: 651481460}
+  m_Layer: 5
+  m_Name: viewcars
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &651481460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 651481459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 30
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 3
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 0
+--- !u!222 &651481461
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 651481459}
+--- !u!224 &651481462
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 651481459}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 334673883}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 256.7, y: -391.69}
+  m_SizeDelta: {x: 171.5, y: 40.3}
+  m_Pivot: {x: 0, y: 1}
 --- !u!1001 &653275708
 Prefab:
   m_ObjectHideFlags: 0
@@ -5101,6 +5188,80 @@ GameObject:
   m_PrefabParentObject: {fileID: 1910300222251608, guid: 61bb27327274f4c47995a48de96354a3,
     type: 2}
   m_PrefabInternal: {fileID: 924009895}
+--- !u!1 &926440054
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 926440055}
+  - component: {fileID: 926440057}
+  - component: {fileID: 926440056}
+  m_Layer: 5
+  m_Name: carsLeft
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &926440055
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 926440054}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 334673883}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 56.77, y: -391.69}
+  m_SizeDelta: {x: 180.5, y: 40.3}
+  m_Pivot: {x: 0, y: 1}
+--- !u!114 &926440056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 926440054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 30
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 3
+    m_MaxSize: 40
+    m_Alignment: 2
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'CARS LEFT:'
+--- !u!222 &926440057
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 926440054}
 --- !u!1001 &937343485
 Prefab:
   m_ObjectHideFlags: 0
@@ -7107,9 +7268,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waypoint: {fileID: 981087640}
-  spawnRate: 10
+  spawnRate: 15
   car: {fileID: 1627624838135588, guid: 02ae4e88f0e74cc4a9d921151a1a327d, type: 2}
-  totalCars: 10
+  totalCars: 5
 --- !u!4 &1315876426
 Transform:
   m_ObjectHideFlags: 0
@@ -7984,9 +8145,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waypoint: {fileID: 1989922769}
-  spawnRate: 10
+  spawnRate: 20
   car: {fileID: 1627624838135588, guid: 02ae4e88f0e74cc4a9d921151a1a327d, type: 2}
-  totalCars: 10
+  totalCars: 5
 --- !u!4 &1488978889
 Transform:
   m_ObjectHideFlags: 0
@@ -8206,9 +8367,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waypoint: {fileID: 447997367}
-  spawnRate: 10
+  spawnRate: 15
   car: {fileID: 1627624838135588, guid: 02ae4e88f0e74cc4a9d921151a1a327d, type: 2}
-  totalCars: 10
+  totalCars: 5
 --- !u!4 &1524218470
 Transform:
   m_ObjectHideFlags: 0
@@ -8809,9 +8970,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waypoint: {fileID: 160705610}
-  spawnRate: 10
+  spawnRate: 20
   car: {fileID: 1627624838135588, guid: 02ae4e88f0e74cc4a9d921151a1a327d, type: 2}
-  totalCars: 10
+  totalCars: 5
 --- !u!4 &1702344757
 Transform:
   m_ObjectHideFlags: 0
@@ -9354,9 +9515,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waypoint: {fileID: 1979965946}
-  spawnRate: 10
+  spawnRate: 15
   car: {fileID: 1627624838135588, guid: 02ae4e88f0e74cc4a9d921151a1a327d, type: 2}
-  totalCars: 10
+  totalCars: 5
 --- !u!4 &1783427640
 Transform:
   m_ObjectHideFlags: 0
@@ -10352,9 +10513,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waypoint: {fileID: 332768818}
-  spawnRate: 10
+  spawnRate: 15
   car: {fileID: 1627624838135588, guid: 02ae4e88f0e74cc4a9d921151a1a327d, type: 2}
-  totalCars: 10
+  totalCars: 5
 --- !u!4 &2006110615
 Transform:
   m_ObjectHideFlags: 0
