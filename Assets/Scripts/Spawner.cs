@@ -25,13 +25,14 @@ public class Spawner : MonoBehaviour {
     {
         for (int i = 0; i<totalCars; i++)
         {
-            yield return new WaitForSeconds(spawnRate);
+            
             coll = Physics2D.OverlapCircle(transform.position, 2, LayerMask.GetMask("Car"));
             if (coll == null)
             {
                 GameObject newCar = Instantiate(car, transform.position, transform.rotation);
                 newCar.GetComponent<Movement>().nextWaypoint = waypoint;
             }
+            yield return new WaitForSeconds(spawnRate);
         }
     }
 }

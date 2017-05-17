@@ -22,6 +22,7 @@ public class Movement : MonoBehaviour
 	public float isWaiting;
     private Vector2 size;
     public bool inIntersection;
+    private float intersectionStartTime;
 
 
 
@@ -76,6 +77,11 @@ public class Movement : MonoBehaviour
         if (inIntersection)
         {
             stopped = false;
+            if (Time.time - intersectionStartTime >= 10)
+            {
+                Destroy(gameObject);
+                score.carsLeft -= 1;
+            }
         }
 
 		//If it's waiting, don't move
@@ -135,6 +141,7 @@ public class Movement : MonoBehaviour
         else if (collision.tag == "MiddleZone")
         {
             inIntersection = true;
+            intersectionStartTime = Time.time;
         }
         
     }
@@ -144,6 +151,7 @@ public class Movement : MonoBehaviour
         if (collision.tag == "MiddleZone")
         {
             inIntersection = false;
+            intersectionStartTime = float.PositiveInfinity;
         }
     }
 
