@@ -9,6 +9,8 @@ public class Spawner : MonoBehaviour {
     public GameObject car;
     public int totalCars;
 
+    public Score score;
+
     private Collider2D coll;
 
 	// Use this for initialization
@@ -31,6 +33,10 @@ public class Spawner : MonoBehaviour {
             {
                 GameObject newCar = Instantiate(car, transform.position, transform.rotation);
                 newCar.GetComponent<Movement>().nextWaypoint = waypoint;
+                newCar.GetComponent<Movement>().score = score;
+            } else
+            {
+                i -= 1;
             }
             yield return new WaitForSeconds(spawnRate);
         }

@@ -1352,6 +1352,7 @@ MonoBehaviour:
   spawnRate: 10
   car: {fileID: 1627624838135588, guid: 02ae4e88f0e74cc4a9d921151a1a327d, type: 2}
   totalCars: 5
+  score: {fileID: 334673884}
 --- !u!4 &159247148
 Transform:
   m_ObjectHideFlags: 0
@@ -6716,6 +6717,7 @@ MonoBehaviour:
   spawnRate: 10
   car: {fileID: 1627624838135588, guid: 02ae4e88f0e74cc4a9d921151a1a327d, type: 2}
   totalCars: 5
+  score: {fileID: 334673884}
 --- !u!4 &1206474389
 Transform:
   m_ObjectHideFlags: 0
@@ -7272,6 +7274,7 @@ MonoBehaviour:
   spawnRate: 15
   car: {fileID: 1627624838135588, guid: 02ae4e88f0e74cc4a9d921151a1a327d, type: 2}
   totalCars: 5
+  score: {fileID: 334673884}
 --- !u!4 &1315876426
 Transform:
   m_ObjectHideFlags: 0
@@ -8149,6 +8152,7 @@ MonoBehaviour:
   spawnRate: 20
   car: {fileID: 1627624838135588, guid: 02ae4e88f0e74cc4a9d921151a1a327d, type: 2}
   totalCars: 5
+  score: {fileID: 334673884}
 --- !u!4 &1488978889
 Transform:
   m_ObjectHideFlags: 0
@@ -8371,6 +8375,7 @@ MonoBehaviour:
   spawnRate: 15
   car: {fileID: 1627624838135588, guid: 02ae4e88f0e74cc4a9d921151a1a327d, type: 2}
   totalCars: 5
+  score: {fileID: 334673884}
 --- !u!4 &1524218470
 Transform:
   m_ObjectHideFlags: 0
@@ -8974,6 +8979,7 @@ MonoBehaviour:
   spawnRate: 20
   car: {fileID: 1627624838135588, guid: 02ae4e88f0e74cc4a9d921151a1a327d, type: 2}
   totalCars: 5
+  score: {fileID: 334673884}
 --- !u!4 &1702344757
 Transform:
   m_ObjectHideFlags: 0
@@ -9519,6 +9525,7 @@ MonoBehaviour:
   spawnRate: 15
   car: {fileID: 1627624838135588, guid: 02ae4e88f0e74cc4a9d921151a1a327d, type: 2}
   totalCars: 5
+  score: {fileID: 334673884}
 --- !u!4 &1783427640
 Transform:
   m_ObjectHideFlags: 0
@@ -10517,6 +10524,7 @@ MonoBehaviour:
   spawnRate: 15
   car: {fileID: 1627624838135588, guid: 02ae4e88f0e74cc4a9d921151a1a327d, type: 2}
   totalCars: 5
+  score: {fileID: 334673884}
 --- !u!4 &2006110615
 Transform:
   m_ObjectHideFlags: 0

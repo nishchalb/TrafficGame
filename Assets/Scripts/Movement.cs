@@ -11,7 +11,7 @@ public class Movement : MonoBehaviour
     public float acceleration = 1.0f;
     public float maxDist;
 	public float waitTime;
-    private Score score;
+    public Score score;
 
 
     private Rigidbody2D rb;
@@ -23,6 +23,8 @@ public class Movement : MonoBehaviour
     private Vector2 size;
     public bool inIntersection;
     private float intersectionStartTime;
+    private float creationTime;
+    public float percentWait;
 
 
 
@@ -33,25 +35,29 @@ public class Movement : MonoBehaviour
         stopped = false;
         isTurning = false;
 		waitTime = 0;
+        percentWait = 0;
 		isWaiting = -1;
         size = new Vector2(.7f, 1f);
         inIntersection = false;
-        score = GameObject.Find("Canvas").GetComponent<Score>();
+        creationTime = Time.time;
+        //score = GameObject.Find("Canvas").GetComponent<Score>();
     }
 
     // Update is called once per frame
     void Update()
     {
-		if (rb.velocity.magnitude == 0) {
-			if (isWaiting == -1) {
-				isWaiting = Time.time;
-				waitTime = isWaiting; // take out
-			}
-		} else if (isWaiting != -1) {
-			Debug.Log ("car moving again");
-			waitTime = waitTime + Time.time - isWaiting;
-			isWaiting = -1;
-		}
+		//if (rb.velocity.magnitude == 0) {
+		//	if (isWaiting == -1) {
+		//		isWaiting = Time.time;
+		//		waitTime = isWaiting; // take out
+		//	}
+		//} else if (isWaiting != -1) {
+		//	Debug.Log ("car moving again");
+		//	waitTime = waitTime + Time.time - isWaiting;
+		//	isWaiting = -1;
+		//}
+
+  //      score.waitTimes[gameObject.GetInstanceID()] = waitTime;
 
     }
 
@@ -72,21 +78,28 @@ public class Movement : MonoBehaviour
             Debug.DrawRay(transform.position, mDist * transform.up, Color.red);
             //Debug.Log ("HIT");
             //Debug.DrawLine(transform.position, hit.transform.position, Color.red);
-			return;
+            waitTime += Time.fixedDeltaTime;
+            percentWait = waitTime / (Time.fixedTime - creationTime);
+            score.waitTimes[gameObject.GetInstanceID()] = waitTime/(Time.deltaTime - creationTime);
+
+            return;
 		}
         if (inIntersection)
         {
             stopped = false;
             if (Time.time - intersectionStartTime >= 10)
             {
-                Destroy(gameObject);
                 score.carsLeft -= 1;
+                Destroy(gameObject);
             }
         }
 
 		//If it's waiting, don't move
 		if (stopped) {
-			return;
+            waitTime += Time.fixedDeltaTime;
+            percentWait = waitTime / (Time.fixedTime - creationTime);
+            score.waitTimes[gameObject.GetInstanceID()] = 100*waitTime / (Time.fixedTime - creationTime);
+            return;
 		}
 
         HandleWaypointCollision();
