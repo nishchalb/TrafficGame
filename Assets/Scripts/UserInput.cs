@@ -45,6 +45,12 @@ public class UserInput : MonoBehaviour {
             Time.timeScale = newVal;
         }
 
+        if(Input.GetKeyDown(KeyCode.Escape) == true)
+        {
+            Application.Quit();
+        }
+
+
 		if (Input.GetMouseButtonDown(0)) {
 			Ray ray = Camera.main.ScreenPointToRay(
 				Input.mousePosition);
